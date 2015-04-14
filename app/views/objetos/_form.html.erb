@@ -1,0 +1,13 @@
+<%= simple_form_for(@objeto) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :crime %>
+    <%= f.association :vitima %>
+    <%= f.input :descricao %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'Salvar' %>
+  </div>
+<% end %>

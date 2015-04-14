@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!doctype html>
+<html>
+<head>
+	<title>RegistraCrimeFinal</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+	<!--web-font-->
+	<link href='http://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,200italic,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
+	<!--//web-font-->
+	<!-- Custom Theme files -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Vision Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!-- //Custom Theme files -->
+	<!-- js -->
+	<script src="js/jquery.min.js"></script>
+	<!-- //js -->	
+	<!-- start-smoth-scrolling-->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>	
+	<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+	<!--//end-smoth-scrolling-->
+</head>
+<body>
+	<!--header-->
+	<div class="header" id="home">
+		<div class="container">
+			<div class="header-logo">
+			
+			</div>
+			<div class="top-nav">
+				<span class="menu"><img src="images/menu-icon.png" alt=""/></span>
+				<ul class="nav1">
+					<li><a href="crimes" class="active">HOME</a></li>
+					<li><a href="#cadastrar" class="scroll">CADASTRAR</a></li>
+					<li><a href="#mapa" class="scroll">MAPA</a></li>
+				</ul>
+				<!-- script-for-menu -->
+				 <script>
+				   $( "span.menu" ).click(function() {
+					 $( "ul.nav1" ).slideToggle( 300, function() {
+					 // Animation complete.
+					  });
+					 });
+				</script>
+				<!-- /script-for-menu -->
+			</div>
+			<div class="clearfix"> </div>
+		</div>	
+	</div>
+	<!--//header-->
+
+	<!--banner-->
+	<div class="banner">				
+				<!--//End-slider-script -->
+				<script src="js/responsiveslides.min.js"></script>
+				 <script>
+					// You can also use "$(window).load(function() {"
+					$(function () {
+					  // Slideshow 4
+					  $("#slider3").responsiveSlides({
+						auto: false,
+						pager: true,
+						nav: true,
+						speed: 500,
+						namespace: "callbacks",
+						before: function () {
+						  $('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+						  $('.events').append("<li>after event fired.</li>");
+						}
+					  });
+				
+					});
+				  </script>
+				<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider3">
+						<li>
+							<div class="banner1">
+								<div class="container">
+									<div class="banner-title">
+										<div class="bnr-top-text">
+											<h1>RegistraCrime</h1>
+										</div>
+										<div class="bnr-bottom-text">
+											<p>Uma nova maneira<br />de registrar crimes<br /> de forma fácil e rápida.</p>
+											<div class="arrow">
+												<span class="arrw"> </span>
+											</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>		
+		<div class="clearfix"> </div>
+	</div>
+	<!--//banner-->
+	<!--contato-->
+	<div id="about" class="about">
+		<div class="container">
+			<div class="about-text">
+				<h3 id="titulo_mapa_us">Contact US</h3>
+				<span class="abt-trngl"></span>
+			</div>	
+			<div class="about-team">	
+				<div class="mapa-form">
+				<div class="container" id="contato">
+					<div class="col-md-6 mapa-left">
+						<p>Entre em contato conosco.</p>
+						<ul>
+							<li><span></span>123, City name. Country.</li>
+							<li><span class="mail"></span><a href="mailto:example@email.com">mail@example.com</a></li>
+							<li><span class="ph-no"></span>+123 4567 789</li>
+						</ul>
+
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+		</div>		
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--//contato-->
+	<!--registrar-->
+	<div class="cadastrar" id="cadastrar">
+		<div class="container">
+			<h3>Registrar um crime</h3>
+			<span class="trngl"></span>
+			<p>Registre aqui o crime que você presenciou!</p>
+			<table>
+				<tr>
+					<td>
+					<p id="botoes_links"><%= link_to 'Locais', locais_path %>
+					<%= link_to 'Tipos', tipos_path %>
+					<%= link_to 'Crimes', crimes_path %>
+					<%= link_to 'Vitimas', vitimas_path %>
+					<%= link_to 'Objetos', objetos_path %></p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<%= yield %>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>		
+	<!--//registrar-->
+	<!--mapa-->
+	<div class="mapa" id="mapa">
+		<div class="map">
+			<div class="map-text">
+				<h3></h3>
+				<span class="trngl"></span>
+			</div>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15457.644695754216!2d79.9584287!3d14.40344505!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1426510338330"  frameborder="0" style="border:0"></iframe>
+		</div>
+	</div>
+	<!--//mapa-->
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-right">
+				<p>© 2015 All rights reserved | Template by <a href="http://w3layouts.com/"> W3layouts</a></p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>	
+	</div>
+	<!--//footer-->
+	<!--smooth-scrolling-of-move-up-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			$().UItoTop({ easingType: 'easeOutQuart' });	
+		});
+	</script>
+	<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->
+	<link rel="stylesheet" href="css/swipebox.css">
+	<script src="js/jquery.swipebox.min.js"></script> 
+	    <script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+		</script>
+
+</body>
+</html>	

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Vitimas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sexo</th>
+      <th>Idade</th>
+      <th>Email</th>
+      <th>Senha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vitimas.each do |vitima| %>
+      <tr>
+        <td><%= vitima.sexo %></td>
+        <td><%= vitima.idade %></td>
+        <td><%= vitima.email %></td>
+        <td><%= vitima.senha %></td>
+        <td><%= link_to 'Show', vitima %></td>
+        <td><%= link_to 'Edit', edit_vitima_path(vitima) %></td>
+        <td><%= link_to 'Excluir', vitima, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vitima', new_vitima_path %>
